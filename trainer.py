@@ -6,4 +6,8 @@ nasa_corpus = scraper.links_to_corpus(nasa_question_links)
 
 print(nasa_corpus)
 
+def train_model(corpus):
+    model = Word2Vec(corpus, size = 50, window = 10, min_count = 1, workers = 4)
+    
+
 
